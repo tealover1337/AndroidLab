@@ -13,9 +13,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
-import com.example.rickmorty.ui.theme.Green50
-import com.example.rickmorty.ui.theme.Red50
-import com.example.rickmorty.ui.theme.DarkSlateGrey
 
 
 @Composable
@@ -53,18 +50,21 @@ fun CharacterCard(
             Column {
                 Text(
                     text = name,
-                    style = MaterialTheme.typography.titleMedium,
+                    style = MaterialTheme.typography.titleLarge.copy(
+                        fontWeight = FontWeight.Bold
+                    ),
                     maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
+                    overflow = TextOverflow.Ellipsis,
+                    color = MaterialTheme.colorScheme.primary
                 )
 
                 Text(
                     text = status,
                     style = MaterialTheme.typography.bodySmall,
                     color = when (status.lowercase()) {
-                        "alive" -> Green50
-                        "dead" -> Red50
-                        else -> DarkSlateGrey
+                        "alive" -> Color.Green
+                        "dead" -> Color.Red
+                        else -> Color.Gray
                     }
                 )
 
