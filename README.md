@@ -8,3 +8,5 @@
 - Клонировать в Android Studio
 - Забилдить
 - Запустить
+![image](https://github.com/user-attachments/assets/211158d3-5954-4fc0-9c38-bc564cb35386)
+
